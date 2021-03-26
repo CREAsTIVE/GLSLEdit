@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>shader edit</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <p>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js'></script><script  src="./script.js"></script>
+  </p>
+  <p>Код шейдера<Br>
+    <textarea name="GLSL" cols="40" rows="3" id="code"></textarea>
+    <input type="text" name="insizeX" placeholder="size X"> <input type="text" name="insizeY" placeholder="size Y">
+  </p>
+  <p>
+    <input type="submit" value="Компилировать" id="startComp">
+  </p>
+  <p>
+    Uniforms:<br>
+    <ul id="uniformsList"></ul><!-- Лист в который я добовляю все кастомные uniform'ы -->
+  </p>
+  <p>
+    <input type="submit" value="Добавить" id="addEl">
+    <input type="submit" value="Удалить" id="removeEl">
+  </p>
+  <pre>
+    Справка:
+      типы:
+        f - float
+        i - int
+        t - texture
+      Встроенные юниформы:
+        vec2 resolution - разрешение
+        float time - сколько времени прошло с последней компиляции (в секундах)
+
+
+  <pre/>
+</body>
+</html>
